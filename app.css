@@ -1,0 +1,171 @@
+:root {
+    --bg-dark: #010101;
+    --bg-card: #09090b;
+    --bg-navbar: #010101;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --accent: #10b981;
+    --accent-glow: rgba(16, 185, 129, 0.15);
+    --success: #10b981;
+    --success-bg: rgba(16, 185, 129, 0.1);
+    --pending: #f59e0b;
+    --pending-bg: rgba(245, 158, 11, 0.1);
+    --border: #27272a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-navbar);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent);
+}
+
+/* Page Header */
+.page-header {
+    padding: 60px 0 40px;
+    text-align: left;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+/* Task List Layout */
+.task-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 60px;
+}
+
+.task-card {
+    background-color: var(--bg-card);
+    padding: 20px 28px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.task-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.task-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: fit-content;
+}
+
+.status-completed {
+    background-color: var(--success-bg);
+    color: var(--success);
+}
+
+.status-pending {
+    background-color: var(--pending-bg);
+    color: var(--pending);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header h2 {
+        font-size: 2rem;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
