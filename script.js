@@ -5,9 +5,9 @@
 const tasks = [
     {
         id: 1,
-        title: "Enviar informe mensual",
-        description: "Revisar las métricas de abril y enviar el documento PDF al equipo de finanzas.",
-        status: "completada"
+        title: "Comprar Leche",
+        description: "Tengo que comprar leche antes de que anochezca",
+        status: "pendiente"
     },
     {
         id: 2,
