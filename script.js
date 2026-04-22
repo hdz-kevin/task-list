@@ -7,13 +7,13 @@ const tasks = [
         id: 1,
         title: "Comprar Leche",
         description: "Tengo que comprar leche antes de que anochezca",
-        status: "pendiente"
+        status: "completada"
     },
     {
         id: 2,
         title: "Hacer la compra semanal",
         description: "Comprar frutas, verduras, leche y café. No olvidar las bolsas reutilizables.",
-        status: "pendiente"
+        status: "completada"
     },
     {
         id: 3,
